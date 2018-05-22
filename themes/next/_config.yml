@@ -127,8 +127,8 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/lanzhiyuan520/
-  Weibo:
+  #GitHub: https://github.com/lanzhiyuan520/
+  #Weibo:
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -141,8 +141,8 @@ social:
 
 social_icons:
   enable: true
-  GitHub: github
-  Weibo: weibo
+  #GitHub: github
+  #Weibo: weibo
 
 # Blog rolls
 links_icon: link
