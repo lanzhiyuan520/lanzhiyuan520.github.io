@@ -6,7 +6,6 @@
       <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
-
   <aside id="sidebar" class="sidebar">
     {% if theme.sidebar.onmobile %}
       <div id="sidebar-dimmer"></div>
@@ -91,7 +90,6 @@
               </a>
             </div>
           {% endif %}
-
           {% if theme.social %}
             <div class="links-of-author motion-element">
                 {% for name, link in theme.social %}
@@ -134,7 +132,7 @@
               </ul>
             </div>
           {% endif %}
-
+           <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26092806&auto=1&height=66"></iframe>
           {% include '../_custom/sidebar.swig' %}
         </div>
       </section>

@@ -93,10 +93,10 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
+  tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || archive
+  about: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -111,7 +111,7 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+scheme: Pisces
 #scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
@@ -126,8 +126,9 @@ scheme: Muse
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
+social:
+  GitHub: https://github.com/lanzhiyuan520/
+  Weibo:
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -140,8 +141,8 @@ scheme: Muse
 
 social_icons:
   enable: true
-  icons_only: false
-  transition: false
+  GitHub: github
+  Weibo: weibo
 
 # Blog rolls
 links_icon: link
@@ -695,7 +696,7 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
 three_waves: false
@@ -803,7 +804,9 @@ vendors:
   # https://github.com/revir/need-more-share2
   needMoreShare2:
 
-
+  live2d:
+    model: wanko
+    bottom: -30
 # Assets
 css: css
 js: js
