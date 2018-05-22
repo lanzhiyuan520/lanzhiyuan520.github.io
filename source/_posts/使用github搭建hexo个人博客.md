@@ -3,6 +3,8 @@ layout: 兰志远
 title: 使用github搭建hexo个人博客
 date: 2018-05-22 11:53:49
 tags: hexo
+type: "tags"
+comments: false
 ---
 ### 准备工作
 * 1.准备一个github账号，没有的话去[github](https://github.com/)注册

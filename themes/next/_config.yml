@@ -431,7 +431,8 @@ gitment:
 #add_this_id:
 
 # Share
-#duoshuo_share: true
+# duoshuo_share: true
+jiathis: false
 
 # NeedMoreShare2
 # This plugin is a pure javascript sharing lib which is useful in China.
