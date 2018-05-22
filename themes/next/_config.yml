@@ -217,7 +217,7 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Post meta display settings
@@ -807,6 +807,10 @@ vendors:
   live2d:
     model: wanko
     bottom: -30
+
+  passage_end_tag:
+    enabled: true
+
 # Assets
 css: css
 js: js
