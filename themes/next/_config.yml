@@ -808,6 +808,7 @@ vendors:
   live2d:
     model: wanko
     bottom: -30
+    mobileShow: false
 
   passage_end_tag:
     enabled: true
