@@ -82,4 +82,24 @@ deploy:
   repository: git@github.com:lanzhiyuan520/lanzhiyuan520..github.io.git
   branch: master
 
+live2d:
+  model:
+    scale: 1
+    hHeadPos: 0.5
+    vHeadPos: 0.618
+  display:
+    superSample: 2
+    width: 100
+    height: 200
+    position: right
+    hOffset: 0
+    vOffset: -20
+  mobile:
+    show: false
+    scale: 0.5
+  react:
+    opacityDefault: 0.7
+    opacityOnHover: 0.2
+  mobileShow: false
+
 avatar: https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKaRiaG7ibAfdDpSbnPkrQgTP1ricHjxudRoMkRMRo0N04Xn3DibljYyVjn6IDT33qTXlBYonufGQV2DA/132

@@ -803,15 +803,32 @@ vendors:
 
   # needMoreShare2
   # https://github.com/revir/need-more-share2
-  needMoreShare2:
+  #needMoreShare2:
 
-  live2d:
-    model: wanko
-    bottom: -30
-    mobileShow: false
 
   passage_end_tag:
     enabled: true
+
+
+  live2d:
+    model:
+      scale: 1
+      hHeadPos: 0.5
+      vHeadPos: 0.618
+    display:
+      superSample: 2
+      width: 100
+      height: 200
+      position: right
+      hOffset: 0
+      vOffset: -20
+    mobile:
+      show: false
+      scale: 0.5
+    react:
+      opacityDefault: 0.7
+      opacityOnHover: 0.2
+    mobileShow: false
 
 # Assets
 css: css
