@@ -128,7 +128,7 @@ scheme: Pisces
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   #GitHub: https://github.com/lanzhiyuan520/
-  #Weibo:
+  #Weibo: https://weibo.com/u/5319202385
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -379,12 +379,12 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: false
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  enable: true
+  appid: MkxzimDBHgKgSNC2BIHII3KF-gzGzoHsz
+  appkey: enpdBRUxBHqbLvhgdBM5NAnS
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: Just go go # comment box placeholder
+  placeholder: 留下你的评论！！ # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
@@ -396,7 +396,9 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere:
+  enable: false
+  livere_uid: MTAyMC8zNjcxNy8xMzI1Mg==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/

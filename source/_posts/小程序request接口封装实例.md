@@ -4,7 +4,6 @@ title: 小程序request接口封装实例
 date: 2018-05-23 14:10:22
 tags: 小程序
 type: "tags"
-comments: false
 ---
 ### 使用Promise对小程序wx.request接口进行封装
 #### 新建一个request.js文件，代码如下:

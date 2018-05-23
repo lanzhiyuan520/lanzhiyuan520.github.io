@@ -4,7 +4,6 @@ title: hexo多台电脑更新博客
 date: 2018-05-22 16:37:02
 tags: hexo
 type: "tags"
-comments: false
 ---
 ### 创建分支
 * <label style="color:#b63650">hexo</label>生成的静态博客文件都是传到github上的，且默认放在master分支上，而配置文件都是放在本地的
