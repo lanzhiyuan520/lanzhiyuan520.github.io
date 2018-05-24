@@ -9,7 +9,7 @@
   // 获取自定义配置
   var ribbon = document.getElementById('ribbon');  // 当前加载的script
   config = {
-      zIndex: getAttr(ribbon, "zIndex", -1), // z-index
+      zIndex: getAttr(ribbon, "zIndex", 1), // z-index
       alpha: getAttr(ribbon, "alpha", 0.6), // alpha
       ribbon_width: getAttr(ribbon, "size", 90), // size
   };
