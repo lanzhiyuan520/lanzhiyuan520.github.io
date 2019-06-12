@@ -84,9 +84,11 @@ sudo netstat -anp | grep mysql
 简单分页查询
 
 ```mysql
-select * from table limit(page-1)*limit,limit;
+select * from table limit(page-1)*size,size;
 /*page : 当前页数*/
-/*limit : 每页的数量*/
+/*size : 每页的数量*/
+/*语法*/
+select * from 表名 limit 起始索引,查询个数;
 ```
 
 like操作符
@@ -149,6 +151,20 @@ select AVG(score) from user;
 /*从user表中查询score字段的平均值*/
 ```
 
+sum()
+
+```mysql
+select sum(age) from user;
+/*查询user表中age的和*/
+```
+
+min、max
+
+```mysql
+select min(age) from user; /*查询user表中age最小的*/
+select max(age) from user; /*查询user表中age最大的*/
+```
+
 order by(排序)
 
 ```mysql
@@ -179,6 +195,13 @@ update user set score=61,age=17 where name='小红';
 delete from user where name='小红';
 /*删除user表中name=小红的数据*/
 /*注意：没有where条件的话则删除表中所有数据*/
+```
+
+truncate
+
+```mysql
+truncate table 表名
+/*清空表数据*/
 ```
 
 between操作符
@@ -366,3 +389,105 @@ select data_format(date,'%y-%m-%d');
 /*将指定日期转换为字符*/
 ```
 
+if函数
+
+```mysql
+select name,age,if(score is null,'无','有') from student;
+/*如果score字段是null则返回无否则返回有*/
+```
+
+case函数
+
+```mysql
+/*第一种情况*/
+select age,name,case age when 18 age*1.1 when 20 then age*1.2 else age end as new_age from user;
+/*如果age等于18返回age*1.1，如果等于20返回age*1.2,否则返回age*/
+
+/*第二种情况*/
+select name,age,score, case  when score > 90 then '优秀' when score > 60 then '及格' else '不及格' end as 成绩级别 from student;
+/*如果成绩大于90显示优秀，大于60显示及格，否则显示不合格*/
+/*
+区别：case 后边加变量和不加变量，和后边返回值或者表达式
+*/
+```
+
+group by
+
+```mysql
+select max(age),gender from user group by gender;
+/*以gender字段进行分组查询，查询年龄最大的*/
+```
+
+having
+
+````mysql
+select count(*),gender from user group by gender having count(*)>10;
+/*以gender字段进行分组查询，返回查询个数大于10的，进行分组后的条件筛选*/
+````
+
+等值连接(sql99语法)
+
+```mysql
+select student_name,teacher_name from student s inner join teacher t on s.id = t.id;
+/*查询学生名字和对应老师的名字*/
+/*语法：*/
+select 查询字段 from 表名 inner join 表2 on 连接条件 inner join 表3 on 连接条件 where 筛选条件(可省略) group by 分组(可省略) order by 排序(可省略)。。。
+/*inner可省略*/
+```
+
+外连接
+
+```mysql
+select s.name from student s left outer join teacher t on s.teacher_id = t.teacher_id where t.id is null;
+/*查询没有老师的学生名字，left左边为主表，右外连接则相反*/
+```
+
+标量子查询(一行一列)
+
+案例1
+
+```mysql
+select * from student where age > (select age from student where name = '小明');
+/*从student表中查询比小明年龄大的同学*/
+```
+
+案例2(多条子查询)
+
+```mysql
+select * from student where score > (select score from student where name = '小明') and age > (select age from student where name = '小明');
+/*从student中查询成绩大于小明并且年龄大于小明的同学*/
+```
+
+案例3
+
+```mysql
+select name,score from student where score = (select min(score) from student);
+/*从student表中查询成绩最低的同学名字和成绩*/
+```
+
+列子查询(多行子查询)
+
+案例1
+
+```mysql
+select name from student where teacher_id in (select teacher_id from teacher where teacher_id in (1,4))
+/*查询老师id为4和1的所有学生姓名*/
+```
+
+案例2
+
+```mysql
+select t.*,(select count(*) from student s where s.teacher_id = t.teacher_id) count from teacher t;
+/*查询每个老师的信息包含每个老师的学生个数 select后子查询*/
+```
+
+提示：子查询可以放在select、from、where、having、in、all等后边
+
+union
+
+```mysql
+select * from student where name like '%a%' union select * from student where age > 20;
+/*联合查询将多条语句查询结果合并*/
+/*查询的列数要一致*/
+/*语句默认自动去重，如果不去重使用union all*/
+```
