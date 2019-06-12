@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-12T01:54:45.718Z</updated>
+  <updated>2019-06-12T01:56:47.228Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vim快捷键</title>
+    <title>pm2进程管理工具</title>
     <link href="http://yoursite.com/2019/06/12/pm2%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
     <id>http://yoursite.com/2019/06/12/pm2进程管理工具/</id>
     <published>2019-06-12T01:54:45.000Z</published>
-    <updated>2019-06-12T01:54:45.718Z</updated>
+    <updated>2019-06-12T01:56:47.228Z</updated>
     
     <content type="html"><![CDATA[<h3 id="pm2进程管理工具"><a href="#pm2进程管理工具" class="headerlink" title="pm2进程管理工具"></a>pm2进程管理工具</h3><p>安装</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install pm2 -g</span><br></pre></td></tr></table></figure><p>启动</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pm2 start app.js #启动一个进程</span><br><span class="line">参数：</span><br><span class="line">--name myapp #设置进程名称为myapp</span><br><span class="line">--watch #监控进程，文件有变化自动重启进程</span><br></pre></td></tr></table></figure><p>查看进程</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pm2 list/pm2 status #进程列表</span><br><span class="line">pm2 show id/pm2 info id #查看进程详细信息</span><br></pre></td></tr></table></figure><p>停止</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pm2 stop all #停止所有进程</span><br><span class="line">pm2 stop id  #停止指定id的进程</span><br></pre></td></tr></table></figure><p>重载</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pm2 reload all #重载所有进程</span><br><span class="line">pm2 reload id #重载指定id的进程</span><br></pre></td></tr></table></figure><p>重启</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pm2 restart all #重启所有进程</span><br><span class="line">pm2 restart id #重启指定id的进程</span><br></pre></td></tr></table></figure><p>查看日志</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 logs</span><br></pre></td></tr></table></figure>]]></content>
     
